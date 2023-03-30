@@ -1,9 +1,9 @@
 // Your JS code here
-var subTypeElement = document.querySelector("#subscription");
-var subDurationElement = document.querySelector("#months");
-var result = document.querySelector(".result");
-var subType = "basic";
-var subDuration = 1;
+let subTypeElement = document.querySelector("#subscription");
+let subDurationElement = document.querySelector("#months");
+let result = document.querySelector(".result");
+let subType = "basic";
+let subDuration = 1;
 
 subTypeElement.addEventListener("change", function (e) {
   subType = e.target.value;
@@ -16,26 +16,14 @@ subDurationElement.addEventListener("change", function (e) {
   updateSubscriptionDiv();
   //console.log(subDuration);
 });
-// var updateSubscriptionDiv = function () {
-//   var monthlyCost = 5;
-//   if (subType === "standard") {
-//     monthlyCost = 7;
-//   } else if (subType === "premium") {
-//     monthlyCost = 10;
-//   }
 
-//   var total = subDuration * monthlyCost;
-//   result.innerText = `You have chosen a ${subDuration} month ${subType} plan for ${$total}.`;
-// };
-
-var updateSubscriptionDiv = function () {
-     var monthlyCost = 5; // for basic plan
-     if (subType === "standard") {
-       monthlyCost = 7;
-     } else if (subType === "premium") {
-       monthlyCost = 10;
-     }
-     var total = subDuration * monthlyCost;
-     result.innerText = `You have chosen a ${subDuration} month ${subType} plan for $${total}.`;
-   };
-   
+const updateSubscriptionDiv = function () {
+  let monthlyCost = 5; // for basic plan
+  if (subType === "standard") {
+    monthlyCost = 7;
+  } else if (subType === "premium") {
+    monthlyCost = 10;
+  }
+  let total = subDuration * monthlyCost;
+  result.innerText = `You have chosen a ${subDuration} month ${subType} plan for $${total}.`;
+};
